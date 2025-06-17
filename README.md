@@ -1,1 +1,1 @@
-My typst files mainly for school.
+# My typst files mainly for school
