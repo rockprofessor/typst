@@ -15,3 +15,12 @@ While you can create arbitrary namespaces with folders, a good namespace for sys
     Import from it with #import "@local/mypkg:1.0.0": *
 
 Note that future iterations of Typst's package management may change/break this local setup.
+
+Example Template:
+/home/robert/.local/share/typst/packages/local/sa-stoff
+
+Import from it with:
+# import "@local/sa-stoff:0.1.0": \*
+
+Create file from template:
+typst init @local/sa-stoff:0.1.0
