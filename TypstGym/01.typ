@@ -102,3 +102,102 @@ dieser Content an die Funktion als *positional* Argument übergeben.
 ]
 
 == Passing Content Part 2
+
+#text(red)[red text]
+
+#text([red text], red)
+
+#text("red text", red)
+
+= Basic Style
+
+== Set Rule
+
+Nur wirksam für alles folgende.  
+
+\#set page(width: 15cm, margin: (left: 9cm, right: 1.5cm))
+
+\#set par(justify: true) // Alle folgenden Paragraphen -> Blocksatz.
+#set par(justify: true)
+
+#lorem(30)
+
+
+Set Regeln können overriden werden.
+
+\#par(justify: false) // Nur dieser Paragraph -> Flattersatz.
+#par(justify: false)[
+    #lorem(30)
+]
+
+#lorem(30)
+
+== A bit about length units
+
+Es gibt unterschiedliche absolute Längeneinheiten in Typst.
+
+#align(center)[
+    #table(
+        align: center,
+        columns: 3,
+        [Einheit],   [Abkürzung], [Beschreibung],
+        [Punkt],     [pt       ], [1/72 Zoll],
+        [Zoll],      [in       ], [2.54 cm],
+        [Zentimeter],[cm       ], [Zentimeter],
+        [Millimeter],[mm       ], [Millimeter]
+    )
+]
+
+== Setting something else
+
+#set quote(block: true, attribution: [Albert Einstein])
+
+#quote[
+    Phantasie ist wichtiger als Wissen, denn Wissen ist begrenzt.
+]
+
+== Opinionated defaults
+
+#set par(justify: true)
+#set list(indent: 1em)
+#set enum(indent: 1em)
+#set page(numbering: "1")
+
+- List Item 1
+- List Item 2
+
++ Enum Item 1
++ Enum Item 2
+
+== Numbering
+
+#set heading(numbering: "I.1:")
+
+= First level Heading
+= Another First level Heading
+== Second
+=== Third
+
+#set heading(numbering: "1.1.")
+
+== The Show Rule
+
+#show "Be careful": strong[Play]
+
+This is a very powerful thing, sometimes even too powerful.
+Be careful with it.
+
+#show "it is holding me hostage": text(green)[I am fine]
+
+Wait, what? I told you "Be careful", not "Play!".
+
+Help, it is holding me hostage.
+
+
+== Now a bit more serious
+
+
+
+
+
+
